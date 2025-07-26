@@ -36,6 +36,9 @@ namespace RevivalMod.Features
         private static Dictionary<string, EFT.PlayerAnimator.EWeaponAnimationType> _originalWeaponAnimationType = new Dictionary<string, PlayerAnimator.EWeaponAnimationType>();
         private static Player PlayerClient { get; set; } = null;
 
+
+        public static bool ForceKillRequested = false;
+
         protected override MethodBase GetTargetMethod()
         {
             // We're patching the Update method of Player to constantly check for revival key press

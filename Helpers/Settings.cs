@@ -7,6 +7,7 @@ namespace RevivalMod.Helpers
     {
         public static ConfigEntry<float> REVIVAL_DURATION;
         public static ConfigEntry<KeyCode> REVIVAL_KEY;
+        public static ConfigEntry<KeyCode> GIVEUP_KEY;
         public static ConfigEntry<float> REVIVAL_COOLDOWN;
         public static ConfigEntry<bool> RESTORE_DESTROYED_BODY_PARTS;
 
@@ -48,6 +49,12 @@ namespace RevivalMod.Helpers
                 "Revival Key",
                 KeyCode.F5
             );
+            Settings.GIVEUP_KEY = config.Bind<KeyCode>(
+                "General",
+                "Give Up Key",
+                KeyCode.F6,
+                "Key to press while in critical state to instantly die (give up)"
+                );
             REVIVAL_COOLDOWN = config.Bind(
                 "General",
                 "Revival Cooldown",
