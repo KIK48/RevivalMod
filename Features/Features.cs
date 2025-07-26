@@ -13,6 +13,7 @@ using UnityEngine;                      //
 using EFT.Communications;               //
 using Comfort.Common;                   //
 using RevivalMod.Helpers;               //
+using BepInEx.Logging;
 
 namespace RevivalMod.Features
 {
@@ -121,7 +122,7 @@ namespace RevivalMod.Features
                     RevivalFeatures.ApplyRevivableStatePlayer(player);
                     if (!player.IsYourPlayer)
                     {
-                        Plugin.LogToFile("Not your player: ");
+                        //Plugin.LogToFile("Not your player: ");
                         return;
                     }
                     try

@@ -58,7 +58,7 @@ namespace RevivalMod.Patches
                 // Check if player is invulnerable from recent revival
                 if (RevivalFeatures.IsPlayerInvulnerable(playerId))
                 {
-                    Plugin.LogSource.LogInfo(string.Concat(new string[] { "Player: ", nickname, " (", profileId, ") is invulnerable, blocking death completely" }));
+                    Plugin.LogSource.LogInfo(string.Concat(new string[] { "Player: ", nickname, " (", playerId, ") is invulnerable, blocking death completely" }));
                     return false; // Block the kill completely
                 }
 
